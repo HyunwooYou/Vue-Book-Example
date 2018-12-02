@@ -1,0 +1,8 @@
+.--initStyle {
+  background: blue;
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  color: var(--color);
+  font-size: var(--font-size);
+}

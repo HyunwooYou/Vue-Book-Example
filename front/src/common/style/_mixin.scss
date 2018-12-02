@@ -1,0 +1,9 @@
+@mixin _flex() {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: antiquewhite;
+}
+
