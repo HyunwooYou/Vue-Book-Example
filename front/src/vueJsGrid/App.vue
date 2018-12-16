@@ -1,21 +1,53 @@
 <template>
   <div id="app">
-    Hello vue-js-grid
+    <div class="color-header">
+      <icon :color="selected" style="width: auto;">
+        vue-js-grid
+      </icon>
+    </div>
+    <grid
+      :center="false"
+      :draggable="true"
+      :sortable="true"
+      :items="colors"
+      :height="80"
+      :width:="80"
+      @change="change"
+      @remove="remove"
+      @click="click"
+      @sort="sort">
+      <template slot="cell" scope="props">
+        <icon :color="props.item"
+              :index="props.index"
+              :with-button="true"
+              @remove="props.remove()">
+        </icon>
+      </template>
+    </grid>
   </div>
 </template>
 
 <script>
+  import Icon from './components/Icon.vue';
+  import { generateRGBColors } from './js/utils.js';
+
   export default {
     name: 'app',
     components: {
-
+      Icon
     },
     data () {
-
+      let colors = generateRGBColors(20);
+      return {
+        colors,
+        selected: null
+      }
     },
     methods: {
       click ({ items, index }) {
-
+        let value = items.find(v => v.index === index);
+        this.selected = value.item;
+        console.log(this.selected);
       },
       change (event) {
         console.log('change', event);
@@ -31,8 +63,20 @@
 </script>
 
 <style>
+  body {
+    background: #fafafa;
+  }
+
   #app {
-    text-align: center;
-    margin-top: 50px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+
+  .color-header {
+    position: relative;
+    padding: 10px 0;
+    box-sizing: border-box;
   }
 </style>
