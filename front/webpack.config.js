@@ -7,9 +7,11 @@ module.exports = {
 
     'ecmascript.app': './src/ecmascript/app.js',
     'home.app': './src/home/app.js',
-    'login.app': './src/login/app.js',
     'multilingual.app': './src/multilingual/app.js',
     'updateCssWithJs.app': './src/updateCssWithJs/app.js',
+
+    'vuex.app': './src/vuex/app.js',
+    'vueJsGrid.app': './src/vueJsGrid/app.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),

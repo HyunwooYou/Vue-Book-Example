@@ -1,9 +1,8 @@
-@mixin _flex() {
+@mixin _flex($direction: row) {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: $direction;
   align-items: center;
 
-  background-color: antiquewhite;
+  // background-color: antiquewhite;
 }
-
