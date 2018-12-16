@@ -11,7 +11,8 @@ module.exports = {
     'updateCssWithJs.app': './src/updateCssWithJs/app.js',
 
     'vuex.app': './src/vuex/app.js',
-    'vueJsGrid.app': './src/vueJsGrid/app.js'
+    'vueJsGrid.app': './src/vueJsGrid/app.js',
+    'vueRouter.app': './src/vueRouter/app.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),

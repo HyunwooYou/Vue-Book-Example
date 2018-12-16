@@ -2,14 +2,15 @@
   <div id="app">
     <div>
       <h1>{{ title }}</h1>
-      <h2><a href="./src/home/index.html" target="_blank">Home</a></h2>
-      <h2><a href="./src/multilingual/index.html" target="_blank">Multilingual</a></h2>
-      <h2><a href="./src/updateCssWithJs/index.html" target="_blank">UpdateCssWithJs</a></h2>
-      <h2><a href="./src/ecmascript/index.html" target="_blank">EcmaScript</a></h2>
+      <h2><a href="./src/home" target="_blank">Home</a></h2>
+      <h2><a href="./src/multilingual" target="_blank">Multilingual</a></h2>
+      <h2><a href="./src/updateCssWithJs" target="_blank">UpdateCssWithJs</a></h2>
+      <h2><a href="./src/ecmascript" target="_blank">EcmaScript</a></h2>
       <hr/>
 
-      <h2><a href="./src/vuex/index.html" target="_blank">Vuex</a></h2>
-      <h2><a href="./src/vueJsGrid/index.html" target="_blank">Vue-Js-Grid</a></h2>
+      <h2><a href="./src/vuex" target="_blank">Vuex</a></h2>
+      <h2><a href="./src/vueJsGrid" target="_blank">Vue-Js-Grid</a></h2>
+      <h2><a href="./src/vueRouter" target="_blank">Vue-Router</a></h2>
     </div>
   </div>
 </template>
