@@ -6,7 +6,7 @@
       <h2><a href="./src/multilingual" target="_blank">Multilingual</a></h2>
       <h2><a href="./src/updateCssWithJs" target="_blank">UpdateCssWithJs</a></h2>
       <h2><a href="./src/ecmascript" target="_blank">EcmaScript</a></h2>
-      <h2><a href="./src/sgBlog" target="_blank">sgBlog</a></h2>
+      <h2><a href="./src/hwBlog" target="_blank" class="mainProject">hwBlog</a></h2>
       <hr/>
 
       <h2><a href="./src/vuex" target="_blank">Vuex</a></h2>
@@ -29,12 +29,16 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "./common/style/_mixin.scss";
-  @import "./common/style/_theme.scss";
 
   #app {
     text-align: center;
     color: #2c3e50;
+
+    div > h2 > .mainProject {
+      padding: 5px;
+      border: 2px solid rgb(0, 150, 214);
+        color: rgb(0, 150, 214);
+    }
   }
 
   a {

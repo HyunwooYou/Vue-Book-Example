@@ -9,7 +9,7 @@ module.exports = {
     'home.app': './src/home/app.js',
     'multilingual.app': './src/multilingual/app.js',
     'updateCssWithJs.app': './src/updateCssWithJs/app.js',
-    'sgBlog.app': './src/sgBlog/app.js',
+    'hwBlog.app': './src/hwBlog/app.js',
 
     'vuex.app': './src/vuex/app.js',
     'vueJsGrid.app': './src/vueJsGrid/app.js',
@@ -79,11 +79,15 @@ module.exports = {
         name: '[name].[ext]?[hash]'
       }
     }
-]
+  ]
 },
-resolve: {
-  alias: {
-    'vue$': 'vue/dist/vue.esm.js'
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      '@components': path.resolve(__dirname, 'src/common/components'),
+      '@js': path.resolve(__dirname, 'src/common/js'),
+      style: path.resolve(__dirname, 'src/common/style'),
+      assets: path.resolve(__dirname, 'src/common/assets'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

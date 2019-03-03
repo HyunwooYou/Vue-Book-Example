@@ -6,7 +6,7 @@
       <div class="_custom2">World!</div>
       <div class="hello-mixin">Flex</div>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -16,21 +16,19 @@
   }
 </script>
 
-<style lang="scss" scoped>
-@import "../../common/style/_theme.scss";
-@import "../../common/style/_mixin.scss";
+<style lang="scss" scoped>  
 
   .container {
+    bordre: 1px solid black;
+    height: 100%;
+
     .content {
+      display: flex;
       height: 1000px;
 
       .msg {
         font-size: 30px;
         font-weight: bold;
-      }
-
-      .hello-mixin {
-        @include _flex();
       }
     }
   }

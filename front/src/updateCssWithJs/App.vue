@@ -29,8 +29,7 @@
   }
 </script>
 
-<style lang="scss">
-  @import "../common/style/theme.scss";
+<style lang="scss">  
   @import "./style/initStyle";
 
   html, body { overflow: hidden; }

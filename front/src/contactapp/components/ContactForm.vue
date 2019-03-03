@@ -24,7 +24,7 @@
         <input type="text" name="address" class="long" v-model="contact.address"
           placeholder="주소를 입력하세요" />
       </div>
-
+      
       <div class="form-group">
         <div>&nbsp;</div>
         <input type="button" class="btn btn-primary"
