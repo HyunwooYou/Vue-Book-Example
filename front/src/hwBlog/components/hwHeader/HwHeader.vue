@@ -2,7 +2,7 @@
 	<div class="header">
 		<div class="content">
 			<div class="projectTitle">
-				<img src="~assets/logo.png" />
+				<!-- <img src="~assets/logo.png" /> -->
 				<span class="vueTitle">Vue Code Storage</span>
 			</div>
 
@@ -124,7 +124,7 @@
 	@import "~style/hwMixin.scss";
 
 	.header {
-		padding-left: 13px;
+		padding-left: 27px;
 		padding-right: 1px;
 		background-color: $white-2;
 		line-height: 25px;
