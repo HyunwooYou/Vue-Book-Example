@@ -63,7 +63,6 @@
 	@import "~style/hwConstant.scss";
 
 	.hwSidebar {
-		// position: relative;
 		height: 100%;
 		background-color: $black-4;
 		color: $white-2;
@@ -74,22 +73,23 @@
 			height: 100%;
 
 			.leftArea {
-				width: 21px;
+				width: 33px;
 				padding-top: 5px;
 				line-height: 10px;
 				margin-left: 4px;
 				border-right: 1px solid $black-6;
 
 				.plusIcon {
-					margin-top: 5px;
+					margin-top: 10px;
+					margin-left: 2px;
 					height: 20px;
-					font-size: 22px;
-					font-weight: bold;
+					font-size: 34px;
 					cursor: pointer;
 				}
 
 				.searchIcon {
-					margin-top: 16px;
+					margin-top: 20px;
+					margin-left: 6px;
 					cursor: pointer;
 
 					.search-circle {
@@ -127,7 +127,7 @@
 					border-bottom: 2px solid $black-2;
 
 					.minusIcon {
-						font-size: 32px;
+						font-size: 37px;
 						margin-top: -3px;
 						cursor: pointer;
 					}
@@ -138,13 +138,10 @@
 					overflow-y: scroll;
 					height: 100%;
 				}
-				.body::-webkit-resizer {
-					background: green;
-				}
 				.body::-webkit-scrollbar {
-					width: 8px;
-					height: 8px;
-					border-radius: 5px;
+					width: 9px;
+					height: 9px;
+					border-radius: 2px;
 				}
 				.body::-webkit-scrollbar-track {
 					background: $black-2;

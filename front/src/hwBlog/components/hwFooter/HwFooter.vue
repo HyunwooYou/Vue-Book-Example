@@ -1,8 +1,10 @@
 <template>
 	<div class="footer">
 		<div class="content">
-			<span>Author: Hyun-woo, Yoo</span>
-			<span>Contact : hyun-woo.yoo@hp.com</span>
+			<span class="author">Author: Hyun-woo, Yoo</span>
+			<span class="contact">
+				<span class="title">Contact: </span>hyun-woo.yoo@hp.com
+			</span>
 		</div>
 	</div>
 </template>
@@ -24,14 +26,19 @@
 		padding: 0 10px;
 		background-color: $black-4;
 		color: white;
-
 		border-top: 1px solid $black-6;
 
 		.content {
 			display: flex;
 			justify-content: space-between;
 			font-size: 11px;
-			user-select: none;
+
+			.author { user-select: none; }
+
+			.contact {
+
+				.title { user-select: none; }
+			}
 		}
 	}
 </style>

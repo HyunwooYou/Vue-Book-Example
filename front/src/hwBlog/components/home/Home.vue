@@ -15,6 +15,8 @@
 					<div class="hw-lg-title">{{subItem.title}}</div>
 				</div>
 			</div>
+
+			<div class="scrollHider" />
 		</div>
 	</div>
 </template>
@@ -45,8 +47,11 @@
 					{ title: 'Null' },{ title: 'Null' },{ title: 'Null' },
 					{ title: 'Null' },{ title: 'Null' },{ title: 'Null' },
 					{ title: 'Null' },{ title: 'Null' },{ title: 'Null' },
+					{ title: 'Null' },{ title: 'Null' },{ title: 'Null' },
+					{ title: 'Null' },{ title: 'Null' },{ title: 'Null' },
+					{ title: 'Null' },{ title: 'Null' },{ title: 'Null' },
 				],
-				selectedTitle: 'Vue',
+				selectedTitle: 'All',
 			}
 		},
 		methods: {
@@ -72,25 +77,29 @@
 	@import "~style/hwMixin.scss";
 
 	// ::-webkit-scrollbar { display: none; }
-	::-webkit-scrollbar { width: 11px; border-radius: 8px; }
-	::-webkit-scrollbar-track { background: $black-5;  }
-	::-webkit-scrollbar-thumb { background: #555; border-radius: 10px;}
-	::-webkit-scrollbar-thumb:hover { background: #666; }
+	// ::-webkit-scrollbar { width: 11px; border-radius: 8px; }
+	// ::-webkit-scrollbar-track { background: $black-5; }
+	// ::-webkit-scrollbar-thumb { background: #555; border-radius: 10px;}
+	// ::-webkit-scrollbar-thumb:hover { background: #666; }
 
 	.home {
 		position: relative;
 		background-color: $black-1;
 		height: 100%;
-		overflow-y: scroll;
+		// overflow-y: scroll;
 
 		.content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
 
 			.header {
-				position: fixed;
-				width: 100%;
+				// position: fixed;
+				// width: 100%;
 				background-color: $black-2;
 				border-left: 1px solid $black-6;
-				border-bottom: 2px solid $black-4;
+				border-bottom: 1px solid $black-4;
+				user-select: none;
 
 				.selector {
 					display: flex;
@@ -114,25 +123,44 @@
 			}
 
 			.body {
-				flex-wrap: wrap;
 				display: flex;
-				padding-left: 10px;
-				padding-top: 50px;
-				padding-bottom: 20px;
+				flex-wrap: wrap;
+				align-content: flex-start;
+				height: 100%;
+				padding: 10px;
+				overflow: scroll;
 
 				.subItem {
 					width: 220px;
 					height: 220px;
 					margin: 20px;
 					padding: 20px;
+					border-radius: 5px;
 					font-weight: bold;
 					background-color: $black-2;
-					border: 2px solid $black-2;
+					border: 3px solid $black-2;
 					cursor: pointer;
+					user-select: none;
 				}
 				.subItem:hover {
-					border: 2px solid $black-5;
+					border: 3px solid $black-5;
 				}
+			}
+			::-webkit-scrollbar { width: 13px; height: 15px; border-radius: 5px; }
+			::-webkit-scrollbar-track { background: $black-5; }
+			::-webkit-scrollbar-thumb { background: #555; border-radius: 5px;}
+			::-webkit-scrollbar-thumb:hover { background: #666; }
+
+			.scrollHider {
+				width: 13px;
+				height: 20px;
+				// height: 100%;
+				// height: 14px;
+				position: absolute;
+				bottom: -1px;
+				right: 0;
+
+				background-color: $black-3;
 			}
 		}
 	}
