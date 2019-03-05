@@ -1,5 +1,5 @@
 <template>
-	<div class="home">
+	<div class="vueIndex">
 		<div class="subItem" v-for="subItem in filteredList">
 			<div class="hw-lg-title">{{subItem.title}}</div>
 		</div>
@@ -9,7 +9,7 @@
 <script>
 
 	export default {
-		name: 'home',
+		name: 'vue-index',
 		data() {
 			return {
 				subItemList: [
@@ -54,11 +54,11 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "~style/hwCustom.scss";
-	@import "~style/hwModule.scss";
-	@import "~style/hwMixin.scss";
+@import "~style/hwCustom.scss";
+@import "~style/hwModule.scss";
+@import "~style/hwMixin.scss";
 
-	.home {
+	.vueIndex {
 
 		.subItem {
 			width: 150px;

@@ -80,9 +80,6 @@
 				isRenderSearchResult: false
 			}
 		},
-		created() {
-			this.initMethods();
-		},
 		computed: {
 			filteredList() {
 				const searchVal = this.search;
@@ -113,7 +110,7 @@
 				this.isRenderSearchResult = false;
 				this.search = '';
 				console.log('[Header] onfocusout');
-			},
+			},	
 		}
 	}
 </script>
