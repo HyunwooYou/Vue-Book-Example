@@ -4,24 +4,11 @@ var webpack = require('webpack');
 module.exports = {
   entry: {
     'app': './src/app.js',
-
-    'ecmascript.app': './src/ecmascript/app.js',
-    'home.app': './src/home/app.js',
-    'multilingual.app': './src/multilingual/app.js',
-    'updateCssWithJs.app': './src/updateCssWithJs/app.js',
-    'hwBlog.app': './src/hwBlog/app.js',
-
-    'vuex.app': './src/vuex/app.js',
-    'vueJsGrid.app': './src/vueJsGrid/app.js',
-    'vueRouter.app': './src/vueRouter/app.js',
-    'contactapp.app': './src/contactapp/app.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
-    publicPath: '/dist/'
-
-    // filename: 'build.js'
+    publicPath: '/dist/'    
   },
   module: {
     rules: [
