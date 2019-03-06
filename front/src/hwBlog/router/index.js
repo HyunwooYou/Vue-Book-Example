@@ -14,8 +14,9 @@ import WebpackIndex from '../tech/webpack/WebpackIndex.vue';
 
 Vue.use(Router);
 
-const BASE_URL = '/Vue-Book-Example/front/src/hwBlog';
-// const BASE_URL = '/src/hwBlog/';
+// const BASE_URL = '/Vue-Book-Example/front/src/hwBlog';
+// const BASE_URL = '/src/hwBlog';
+const BASE_URL = '*';
 
 export default new Router({
   mode: 'history',
