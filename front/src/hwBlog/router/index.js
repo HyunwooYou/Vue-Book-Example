@@ -14,7 +14,6 @@ import WebpackIndex from '../tech/webpack/WebpackIndex.vue';
 
 Vue.use(Router);
 
-// server base url
 const BASE_URL = '/Vue-Book-Example/front/src/hwBlog';
 // const BASE_URL = '/src/hwBlog/';
 
