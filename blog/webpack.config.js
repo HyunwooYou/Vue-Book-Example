@@ -8,10 +8,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
-    publicPath: '/dist/'    
+    publicPath: '/dist/'
   },
   module: {
     rules: [
+      // {
+      //   resourceQuery: /blockType=docs/,
+      //   loader: require.resolve('./custom-loaders/docs-loader.js')
+      // },
       {
         test: /\.css$/,
         use: [
@@ -49,7 +53,8 @@ module.exports = {
               'vue-style-loader',
               'css-loader',
               'sass-loader?indentedSyntax'
-            ]
+            ],
+            'docs': require.resolve('./custom-loaders/docs-loader.js')
           }
           // other vue-loader options go here
         }
