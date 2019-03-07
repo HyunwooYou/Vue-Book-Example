@@ -6,7 +6,8 @@ new Vue({
   el: '#app',
   router,
   created() {
-    this.$router.push(window.location.pathname);
+    const path = window.location.href.split('/');    
+    this.$router.push('/' + path[path.length - 1]);
   },
   render: h => h(App)
 })
