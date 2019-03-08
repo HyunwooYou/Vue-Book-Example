@@ -27,6 +27,7 @@
 		background-color: $black-4;
 		color: white;
 		border-top: 1px solid $black-6;
+		user-select: none;
 
 		.content {
 			display: flex;

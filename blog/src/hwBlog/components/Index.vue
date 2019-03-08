@@ -38,7 +38,7 @@
 			padding: 10px;
 			overflow: scroll;
 
-			color: white;					
+			color: white;
 		}
 
 		::-webkit-scrollbar { width: 13px; height: 15px; border-radius: 5px; }

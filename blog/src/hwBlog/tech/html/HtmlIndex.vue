@@ -1,7 +1,12 @@
 <template>
 	<div class="htmlIndex">
 		<!-- Hello Html Index. -->
-		<pre>{{docs}}</pre>
+		<div class="content">
+			<pre>{{docs}}</pre>
+			<div v-for="el in msg">
+				{{el}}
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -13,7 +18,8 @@
 		components: { DocsComponent },
 		data() {
 			return {
-				docs: DocsComponent.__docs
+				docs: DocsComponent.__docs,
+				msg: [],
 			}
 		},
 		created() {
@@ -21,21 +27,32 @@
 		},
 		methods: {
 			initDocs() {
-				console.log(this.docs);
+				// console.log(this.docs);
 				this.docs = this.docs.replace(/	/gi, '  ');
+				this.msg = this.docs;
 			}
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
+	@import "~style/hwCustom.scss";
+	@import "~style/hwModule.scss";
+	@import "~style/hwMixin.scss";
+
 
 	.htmlIndex {
+		display: flex;
+		flex-direction: column;
 
 		pre {
-			padding-left: 30px;
-			position: absolute;
-			font-size: 16px;			
+			display: flex;
+			padding-left: 10px;
+			line-height: 23px;
+			font-size: 16px;
+			margin-top: -15px;
+
+			// border: 1px solid white;
 		}
 	}
 </style>

@@ -20,5 +20,5 @@
 		.sample {
 
 		}
-	</style>	
+	</style>
 </docs>
