@@ -4,12 +4,6 @@ import router from './hwBlog/router';
 
 new Vue({
   el: '#app',
-  router,
-  created() {
-    const route = window.location.href.split('?');
-    if(route.length > 1) {
-      this.$router.push(route[0] + '/' + route[1]);
-    }
-  },
+  router,  
   render: h => h(App)
 })

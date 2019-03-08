@@ -19,7 +19,7 @@ Vue.use(Router);
 const BASE_URL = '*';
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: BASE_URL,
