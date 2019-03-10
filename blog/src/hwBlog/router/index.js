@@ -23,7 +23,7 @@ export default new Router({
   routes: [
     {
       path: BASE_URL,
-			component: Home,
+			component: HtmlIndex,
       // redirect: '/src/hwBlog/Home'
     },
     {

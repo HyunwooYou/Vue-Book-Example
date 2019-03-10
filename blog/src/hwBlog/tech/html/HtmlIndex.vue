@@ -2,10 +2,15 @@
 	<div class="htmlIndex">
 		<!-- Hello Html Index. -->
 		<div class="content">
-			<pre>{{docs}}</pre>
-			<div v-for="el in msg">
-				{{el}}
+			<div class="highlight" v-for="x in d">
+				<span class="innerSpan" v-for="y in x">
+					<span v-if="y !== ' '"
+						:style="{color: leafColor(y)}">{{y}}</span>
+					<span v-else style="letter-spacing: 3px;">&nbsp;</span>
+				</span>
+				<br/>
 			</div>
+
 		</div>
 	</div>
 </template>
@@ -19,19 +24,41 @@
 		data() {
 			return {
 				docs: DocsComponent.__docs,
-				msg: [],
+				d: [], // element docs
 			}
 		},
 		created() {
 			this.initDocs();
+			this.initMsg();
 		},
 		methods: {
 			initDocs() {
-				// console.log(this.docs);
+				// Tab key => two spacing
 				this.docs = this.docs.replace(/	/gi, '  ');
-				this.msg = this.docs;
+			},
+			initMsg() {
+				this.d = this.docs;
+				this.d = this.d.split('\n');
+				// this.d = this.d.replace(/ /gi, '  ');
+				this.d.splice(0, 1);
+			},
+			fontColor(str) {
+				console.log(str);
+				if(str === 'import') return 'rgb(234, 135, 52)';
+			},
+			leafColor(char) {
+				if(char === '=') return 'white';
+				if(char === '\"') return 'rgb(167, 197, 98)';
+				if(char === '\'') return 'rgb(90, 111, 77)';
+				if(char === '{') return 'rgb(154, 167, 180)';
+				if(char === '}') return 'rgb(154, 167, 180)';
+				if(char === '(') return 'rgb(154, 167, 180)';
+				if(char === ')') return 'rgb(154, 167, 180)';
+				if(char === '[') return 'rgb(154, 167, 180)';
+				if(char === ']') return 'rgb(154, 167, 180)';
+				if(char === ':') return 'rgb(154, 167, 180)';
 			}
-		}
+		},
 	}
 </script>
 
@@ -40,19 +67,24 @@
 	@import "~style/hwModule.scss";
 	@import "~style/hwMixin.scss";
 
-
 	.htmlIndex {
-		display: flex;
+	 	display: flex;
 		flex-direction: column;
 
-		pre {
-			display: flex;
-			padding-left: 10px;
-			line-height: 23px;
-			font-size: 16px;
-			margin-top: -15px;
+		.content {
+			width: 100%;
 
-			// border: 1px solid white;
+			.highlight {
+				line-height: 24px;
+				letter-spacing: 0.5px;
+				color: rgb(237, 200, 109);
+			}
 		}
+	}
+
+	pre {
+		font-size: 18px;
+		letter-spacing: 0.8px;
+		white-space: pre-wrap;
 	}
 </style>

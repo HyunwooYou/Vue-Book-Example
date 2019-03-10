@@ -31,7 +31,7 @@
 	export default {
 		data() {
 			return {
-				isOpenMenu: true,
+				isOpenMenu: false,
 				curKeyCode: null,
 			}
 		},
