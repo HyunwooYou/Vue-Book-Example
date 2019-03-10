@@ -57,7 +57,7 @@
 				if(char === '[') return 'rgb(154, 167, 180)';
 				if(char === ']') return 'rgb(154, 167, 180)';
 				if(char === ':') return 'rgb(154, 167, 180)';
-			}
+			},
 		},
 	}
 </script>
@@ -71,13 +71,21 @@
 	 	display: flex;
 		flex-direction: column;
 
+
 		.content {
 			width: 100%;
 
 			.highlight {
-				line-height: 24px;
+				width: 100%;
+				line-height: 23px;
 				letter-spacing: 0.5px;
 				color: rgb(237, 200, 109);
+				z-index: 10;
+				// border: 1px solid transparent;
+			}
+			.highlight:hover {
+				background-color: rgb(50, 50, 50);
+				// border: 1px solid white;
 			}
 		}
 	}
